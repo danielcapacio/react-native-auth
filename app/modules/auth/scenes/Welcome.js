@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
+import { SocialIcon } from 'react-native-elements'
 
 import {Button} from 'react-native-elements'
 import {Actions} from 'react-native-router-flux'

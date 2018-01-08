@@ -42,3 +42,14 @@ export function signOut(successCB, errorCB) {
         });
     };
 }
+
+export function signInWithFacebook(facebookToken, successCB, errorCB) {
+    return (dispatch) => {
+        api.signInWithFacebook(facebookToken, function (success, data, error) {
+            if (success) {
+                dispatch({type: t.LOGIN_SUCCESS, user: data});
+                successCB();
+            }else if (error) errorCB(error)
+        });
+    };
+}
